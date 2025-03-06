@@ -9,16 +9,23 @@ import pandas as pd
 email_sender = 'nextgenbiotech.fabit@gmail.com'
 email_password = input('password: ')
 
-# email_receivers = [""]
+email_receivers = ["sofia.pasquale@icloud.com", "sofia.np1104@gmail.com", "sofia.pasquale2@studio.unibo.it"]
 
-path = input("path: ")
-df = pd.read_csv(path)
-email_receivers = list(df.Email)
+#path = input("path: ")
+#df = pd.read_csv(path)
+#email_receivers = list(df.Email)
 
-subject = 'Seminar - 4th March - Engineered Bacteriophages for Medical Applications'
+subject = 'NextGen BioTech Newsletter - February'
 
 images = [
-    {"path": "poster.jpeg", "cid": "poster"},
+    {"path": "Header Newsletter.png", "cid": "header"},
+    {"path": "Recap.png", "cid": "recap"},
+    {"path": "seminar.jpg", "cid": "seminar"},
+    {"path": "Announce.png", "cid": "announcements"},
+    {"path": "Rec.png", "cid": "recommendations"},
+    {"path": "joy.jpg", "cid": "joy"},
+    {"path": "Research.png", "cid": "research"},
+    {"path": "drug.jpg", "cid": "drug"},
     {"path": "Updated logo+name+slogan.png", "cid": "logo"}
 ]
 
@@ -53,4 +60,3 @@ def send_email(receivers):
 
 
 send_email(email_receivers)
-
